@@ -342,8 +342,8 @@ var _hmt = _hmt || [];
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">主导航</li>
-        <li>
-            <a href="javascript: viod 0">
+        <li class="active treeview">
+            <a href="#/home">
               <i class="fa fa-home"></i> <span>首页</span>
               <!-- <span class="pull-right-container">
                 <small class="label pull-right bg-green">new</small>
@@ -352,14 +352,14 @@ var _hmt = _hmt || [];
           </li>
         
         <li>
-          <a href="javascript: viod 0">
+          <a href="#/position">
             <i class="fa fa-cogs"></i> <span>职位管理</span>
             <!-- <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
             </span> -->
           </a>
         </li>
-        <li class="active treeview">
+        <!-- <li>
             <a href="#">
               <i class="fa fa-navicon"></i> <span>仪表盘</span>
               <span class="pull-right-container">
@@ -370,7 +370,7 @@ var _hmt = _hmt || [];
               <li class="active"><a href="javascript: viod 0"><i class="fa fa-circle-o"></i> 仪表盘 v1</a></li>
               <li><a href="javascript: viod 0"><i class="fa fa-circle-o"></i> 仪表盘 v2</a></li>
             </ul>
-          </li>
+          </li> -->
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -380,21 +380,24 @@ var _hmt = _hmt || [];
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        仪表盘
-        <small>控制面板</small>
+      <h1 id="title">
+        <span></span>
+        <small></small>
       </h1>
-      <ol class="breadcrumb">
+      <!-- <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
-        <li class="active">仪表盘</li>
-      </ol>
+        <li class="active">职位管理</li>
+      </ol> -->
+      
     </section>
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content"  id="router-view">
       <!-- Small boxes (Stat box) -->
       <!-- /.row (main row) -->
-
+      
+        <!-- /.box-header -->
+        
     </section>
     <!-- /.content -->
   </div>
@@ -615,7 +618,7 @@ var _hmt = _hmt || [];
 <script src="./lib/scripts/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
 <script src="./lib/scripts/raphael-min.js"></script>
-<script src="./lib/scripts/morris.min.js"></script>
+<!-- <script src="./lib/scripts/morris.min.js"></script> -->
 <!-- Sparkline -->
 <script src="./lib/scripts/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->
@@ -637,8 +640,9 @@ var _hmt = _hmt || [];
 <!-- AdminLTE App -->
 <script src="./lib/scripts/app.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="./lib/scripts/dashboard.js"></script>
+<!-- <script src="./lib/scripts/dashboard.js"></script> -->
 <!-- AdminLTE for demo purposes -->
 <script src="./lib/scripts/demo.js"></script>
+<!-- app.js -->
 </body>
 </html>

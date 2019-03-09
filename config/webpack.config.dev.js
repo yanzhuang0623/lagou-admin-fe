@@ -74,6 +74,10 @@ module.exports = {
                 presets: ['@babel/preset-env', '@babel/preset-react']
                 }
             }
+          },
+          {
+              test: /\.html$/,
+              loader: "string-loader"  //资源文件转换为字符串
           }
         ]
     },
