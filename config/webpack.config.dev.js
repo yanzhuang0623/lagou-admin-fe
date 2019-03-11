@@ -99,10 +99,14 @@ module.exports = {
         hot: true,  //是否启动热替换
         inline: true, //当源文件改变时会自动刷新页面
         proxy: { // 代理设置
-            '/api/douban': {
-                target: 'http://api.douban.com',
+            // '/api/douban': {
+            //     target: 'http://api.douban.com',
+            //     changeOrigin: true,
+            //     pathRewrite: {'^/api/douban' : ''}
+            // },
+            '/api':{
+                target: 'http://localhost:3000/',
                 changeOrigin: true,
-                pathRewrite: {'^/api/douban' : ''}
             }
         },
         stats: 'errors-only' //通过此选项，可以精确控制要显示的 bundle 信息.这里只展示错误信息

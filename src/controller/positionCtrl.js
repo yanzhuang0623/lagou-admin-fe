@@ -6,5 +6,11 @@ module.exports = {
         $('#addBtn').on('click', () => {
             router.go('/position/add')
         })
-    }
+    },
+
+    // getPositionList() {
+    //     $.ajax({
+    //         url: ''
+    //     })
+    // }
 }

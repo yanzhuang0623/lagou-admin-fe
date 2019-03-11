@@ -20,10 +20,10 @@ module.exports = {
             }
         })
 
-        $('#submitBtn').on('click', this.submission)
+        $('#submitBtn').on('click', this.submission.bind(this, router))
     },
 
-    submission() {
+    submission(router) {
         const companyName = $('#companyName').val(),
               positionName = $('#positionName').val(),
               city = $('#city').val(),
@@ -34,7 +34,7 @@ module.exports = {
               description = $('#description').val();
 
         $.ajax({
-            url: '/api/position/add',
+            url: '/api/position/save',
             type: 'POST',
             data: {
                 companyName,
@@ -47,7 +47,9 @@ module.exports = {
                 description,
             },
             success:(result) => {
-               console.log(result)
+               if(result.ret) {
+                   router.back()
+               }
             }
         })
     }
