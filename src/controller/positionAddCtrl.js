@@ -20,7 +20,7 @@ module.exports = {
             }
         })
 
-        $('#submitBtn').on('click', this.submission.bind(this, router))
+        $('#submitBtn').on('click', this.ajaxSubmission.bind(this, router))
     },
 
     submission(router) {
@@ -52,5 +52,24 @@ module.exports = {
                }
             }
         })
+    },
+
+    ajaxSubmission(router) {
+        const options = {
+            "url": '/api/position/save',
+            "success": (result) => {
+                this.resultForm(result, router)
+            },
+            "resetForm" : true,
+            "dataType" : "json"
+        };
+        $("#addForm").ajaxSubmit(options);
+    },
+
+    resultForm: (result, router) => {
+        if(result.ret) {
+            router.back()
+        }
+       
     }
 }

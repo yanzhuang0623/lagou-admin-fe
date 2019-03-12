@@ -17,7 +17,7 @@ module.exports = {
         const match = {
             '/home': ['首页', '用户信息'],
             '/position': ['职位管理', '列表'],
-            '/position/add':['职位管理', '添加']
+            '/position_add':['职位管理', '添加']
         }
         $('#title').find('span').html(match[hash][0])
         $('#title').find('small').html(match[hash][1])

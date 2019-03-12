@@ -14,19 +14,23 @@
         <th>岗位薪资</th>
         <th style="width: 300px">操作</th>
       </tr>
-      <tr>
-        <td>1.</td>
-        <td><img width="30" height="30" src="http://www.lgstatic.com/i/image/M00/40/F5/CgpFT1lbP9OAavMTAAAQE8brCyg014.png" alt=""></td>
-        <td>上海流驿信息科技有限公司</td>
-        <td>销售经理</td>
-        <td>上海</td>
-        <td>2019/3/9 21:35</td>
-        <td>15K - 30K</td>
-        <td>
-            <button type="button" class="btn btn-primary"><i class="fa fa-edit"></i>  修改</button>
-            <button type="button" class="btn btn-danger"><i class="fa fa-remove"></i>  删除</button>
-        </td>
-      </tr>
+      {{each data}}
+          <tr>
+            <td>{{$index+1}}</td>
+            <td><img width="30" height="30" src="http://localhost:3000/uploads/{{$value.companyLogo}}" alt=""></td>
+            <td>{{$value.companyName}}</td>
+            <td>{{$value.positionName}}</td>
+            <td>{{$value.city}}</td>
+            <td>{{$value.createTime}}</td>
+            <td>{{$value.experience}}</td>
+            <td>
+                <button type="button" class="btn btn-primary"><i class="fa fa-edit"></i>  修改</button>
+                <button type="button" class="btn btn-danger"><i class="fa fa-remove"></i>  删除</button>
+            </td>
+          </tr>
+      {{/each}}
+
+      
       <!-- <tr>
         <td>2.</td>
         <td>Clean database</td>

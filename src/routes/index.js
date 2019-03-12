@@ -13,7 +13,7 @@ router.route('/position', (req, res, next) => {
   positionCtrl.routeCallBack({req, res, next, router})
 })
 
-router.route('/position/add', (req, res, next) => {
+router.route('/position_add', (req, res, next) => {
   positionAddCtrl.routeCallBack({req, res, next, router})
 })
 
